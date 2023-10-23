@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>IoI</title>
+		<link rel="stylesheet" href="fonts.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+	
+    <header>
+
+
+
+
+
+
+      <div class="logo">
+	<img src="images/logo.png" alt="вау логотип">	
+      </div>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+        <span></span>
+        </label>
+        <ul class="menu__box">
+        <li><a class="menu__item" href="#">Главная</a></li>
+        <li><a class="menu__item" href="index3.html">Команда</a></li>
+        <li><a class="menu__item" href="index4.html">Товары</a></li>
+        </ul>
+      </div>
+
+    </header>
+
+    <main>
+    	<section class="banner">
+    		<div class="banner-text">
+    		    <h1>Za<span class="text_white">K</span>ladka</h1>
+    		</div>
+    		<div class="banner-img"></div>
+    	</section>
+
+    	<section class="about">
+
+    		<div class="about-item">
+    			<h3>Онлайн</h3>
+    			<i class="icon innovative"></i>
+    			<p>Быстрое и доступное оформление заказа онлайн. Больше не придётся тратить много времени на подачу заявки и ожидания ответа.</p>
+    		</div>
+
+    		<div class="about-item">
+    			<h3>Товары</h3>
+    			<i class="icon unlimited"></i>
+    			<p>Большое разнообразие товаров канцелярии. Доставка товара в эту же перемену, на любой этаж 49 школы.</p>
+    		</div>
+
+    		<div class="about-item">
+    			<h3>Поддержка</h3>
+    			<i class="icon TRENDY"></i>
+    			<p>Возникли вопросы? Вы всегда можете обратиться в поддержку по номеру -</p>
+    		</div>
+
+    		<div class="clear"></div>
+    	</section>
+
+	<section class="form">
+         	<h2>Форма для заказа</h2>
+          <form name="zakaz" method="POST" action="/send.php">
+		  
+				<p><?= $return ?></p>
+         		<input type="familia" name="surname" placeholder="Фамилия" >
+         		<input type="name" name="name" placeholder="Имя">
+         		<input type="tel" name="cabinet" placeholder="Кабинет">
+         		<textarea name="number" placeholder="Описание заказа"></textarea>
+         		<button type="submit" class="btn">Заказать</button>
+				<input type="hidden" name="act" value="order">
+         	</form>
+         </section>
+
+    </main>
+
+    <footer>
+    
+    </footer>
+
+   </body>
+
+</html>

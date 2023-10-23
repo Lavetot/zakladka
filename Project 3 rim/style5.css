@@ -1,0 +1,336 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+body {
+	width: auto;
+	height: 100%;
+	background-color: #fff;
+}
+
+h1, h2, .copy {
+	font-family: "RedRingLight", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+button {
+	font-family: "ProximaNovaLight", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+input, textarea, button {
+	outline: none;
+}
+
+.text_white {
+	color: white;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+header {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding-top: 15px; 
+	z-index: 1;
+}
+header .logo {
+	text-align: center;
+}
+
+.banner{
+	position: relative;
+	height: 100%;
+	background: linear-gradient(0deg, #ffa8a8, #fcff00);
+	padding-top: 200px;
+	z-index: 0; 
+
+}
+.banner .banner-text {
+	text-align: center;
+} 
+.banner .banner-text h1 {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+.banner .banner-text h1 span {
+	font-family: "RedringRegular", sanf-serif;
+	font-weight: 400;
+	font-style: normal; 
+}
+
+.about {
+	padding: 105px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.about .about-item {
+	display: inline-block;
+	float: left;
+	width: 33.33%;
+	padding: 0 30px;
+	text-align: center;
+}
+.about .about-item h3{
+	font-family: "ProximaNovathin , sans-serif";
+	font-size: 24px;
+	font-weight: 300;
+	font-style: normal;
+	text-transform: uppercase;
+}
+.about .about-item .icon {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	margin: 25px 0;
+}
+.about .about-item .icon.innovative {
+	background: url("images/dengi.png") no-repeat center center;
+    background-size: auto;
+} 
+
+.about .about-item .icon.TRENDY {
+	background: url("images/chell.png") no-repeat center center;
+    background-size: auto;   
+} 
+.about .about-item p{
+	width: 75%;
+	font-family: "ProximaNovaLight", sans-serif;
+	font-size: 18px;
+	margin: 0 auto;
+	text-align: justify;
+
+}
+.form {
+	position: relative;
+	padding: 105px 0;
+	text-align: center;
+	background-color: #f8f8f8;
+}
+.form h2 {
+	font-size: 24px;
+	margin-bottom: 50px; 
+}
+.form form {
+	display: inline-block;
+	width: 60%;
+
+}
+.form form input,
+.form form textarea {
+	width: 100%;
+	font-size: 18px;
+	color: #000;
+	border:  2px solid #ffa8a8;
+	border-radius: 15px;
+	text-align: center; 
+    margin-bottom: 50px; 
+}
+.form form input {
+	height: 42px;
+}
+.form form textarea {
+	height: 200px;
+	padding-top: 10px;
+	resize: none;
+}
+.btn {
+	display:inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 42px;
+	font-size: 18px;
+	padding: 10px 10px;
+	border: none;
+	border-radius: 15px;
+	text-transform: uppercase;
+	background-image: linear-gradient(to right, #ffa8a8 0%, #fcff00 50%, #ffa8a8 100%);
+	background-size: 200% auto;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.btn:hover {
+	 background-position: right center;
+
+}
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	background-color: #ffa8a8;
+	text-transform: uppercase;
+}
+
+
+#menu__toggle {
+	opacity: 0;
+	display:flex;
+	position: fixed;
+}
+
+.menu__btn {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #616161;
+}
+.menu__btn > span::before {
+	content: '';
+	top: -8px;
+}
+.menu__btn > span::after {
+	content: '';
+	top: 8px;
+}
+
+.menu__box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	left: -100%;
+	width: 300px;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	list-style: none;
+	text-align: center;
+	background-color: #ECEFF1;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+	opacity: 90%;
+}
+
+.menu__item {
+	display: block;
+	padding: 12px 24px;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+}
+.menu__item:hover {
+	background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	transition-duration: .25s;
+}
+.menu__box {
+	transition-duration: .25s;
+}
+.menu__item {
+	transition-duration: .25s;
+}
+
+
+
+
+
+.button-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  height: 100%;
+}
+
+.glass-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  margin-left: 1em;
+  margin-right: 1em;  
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 200px;
+
+}
+
+
+
+
+.main {
+   
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+        transition: background 0.2s;
+        top:0;
+        left: 40%;
+        position: relative;
+        text-decoration: none;
+}
+.main:hover {
+	background:red;
+}
+
+
+
